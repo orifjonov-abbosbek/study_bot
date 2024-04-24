@@ -17,7 +17,7 @@ const options = {
       },
     ],
   },
-  apis: ["./router/router*.js"], // Specify the path to your route files
+  apis: ["./src/router/router*.js"], // Specify the path to your route files
 };
 
 // Initialize Swagger-jsdoc
