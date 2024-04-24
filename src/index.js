@@ -1,7 +1,7 @@
 const express = require("express");
 const sequelize = require("./database/connection"); // Import sequelize
 const routes = require("./router/router"); // Import routes
-const { specs, swaggerUi } = require("./swaggerConfig");
+const { specs, swaggerUi } = require("../swaggerConfig");
 
 // Check if sequelize is connected
 sequelize

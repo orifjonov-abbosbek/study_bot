@@ -2,8 +2,6 @@
 const Question = require("../database/models/questions");
 const { Op } = require("sequelize");
 
-
-
 // Function to search for questions by keyword
 async function searchQuestions(keyword) {
   try {
@@ -21,7 +19,6 @@ async function searchQuestions(keyword) {
     throw error;
   }
 }
-
 
 // Function to create a new question
 async function createQuestion(questionText, answerText) {
@@ -47,10 +44,6 @@ async function updateQuestion(id, questionText, answerText) {
     throw error;
   }
 }
-
-
-
-
 
 // Function to delete a question by ID
 async function deleteQuestion(id) {
