@@ -87,7 +87,6 @@ router.get("/questions", async (req, res) => {
     res.status(500).json({ message: "Internal server error" });
   }
 });
-
 /**
  * @swagger
  * /api/questions:
@@ -99,7 +98,15 @@ router.get("/questions", async (req, res) => {
  *       content:
  *         application/json:
  *           schema:
- *             $ref: '#/components/schemas/Question'
+ *             type: object
+ *             properties:
+ *               questionText:
+ *                 type: string
+ *               answerText:
+ *                 type: string
+ *             required:
+ *               - questionText
+ *               - answerText
  *     responses:
  *       201:
  *         description: New question created successfully
@@ -110,6 +117,7 @@ router.get("/questions", async (req, res) => {
  *       500:
  *         description: Internal server error
  */
+
 
 // Create a new question
 router.post("/questions", async (req, res) => {
