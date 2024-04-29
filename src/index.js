@@ -2,6 +2,7 @@ const express = require("express");
 const sequelize = require("./database/connection"); // Import sequelize
 const routes = require("./router/router"); // Import routes
 const { specs, swaggerUi } = require("../swaggerConfig");
+const cors = require("cors");
 
 // Check if sequelize is connected
 sequelize
@@ -16,6 +17,7 @@ sequelize
 const app = express();
 
 app.use(express.json());
+app.use(cors());
 
 // Use routes
 app.use("/api", routes);
