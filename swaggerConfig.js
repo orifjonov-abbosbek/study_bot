@@ -1,7 +1,6 @@
 const swaggerJsdoc = require("swagger-jsdoc");
 const swaggerUi = require("swagger-ui-express");
 
-// Define Swagger configuration options
 const options = {
   swaggerDefinition: {
     openapi: "3.0.0",
@@ -12,7 +11,7 @@ const options = {
     },
     servers: [
       {
-        url: "http://localhost:3000", // Update the URL to match your server's URL
+        url: "https://study-bot-lcbn.onrender.com", // Update the URL to match your server's URL
         description: "Development server",
       },
     ],
